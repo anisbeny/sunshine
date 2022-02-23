@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/sunshine.png" />
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sunshine</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="navbar-brand"><a href="index.html"><img src="img/sunshine.png" alt="log"></a></div>
+
+            <ul class="navbar-links">
+                <li class="navbar-link"><a href="index.html">Accueil</a></li>
+                <li class="navbar-link"><a href="page1.html">hôtels</a></li>
+                <li class="navbar-link"><a href="connexion.html">Me connecter</a></li>
+
+            </ul>
+            <button class="burger"> <span class="bar"></span></button>
+        </nav>
+    </header>
+    <!-- -------------fin du header------------ -->
+    <main role="main">
+        
+            <form action="page1.html" method="post">
+                <section class="flxdcol flexac flex flexdc flxjspar">
+
+                    <!-- <div class="group field"> -->
+                        <label for="hotel-select" class="form__label">Choix hôtel</label>
+
+                        <select name="choixhotel" class="class_input" id="hotel-select" onChange="Lien()">
+                            <option value="sunshine">Sunshine</option>
+                            <option value="ibis-prie">ibis-pink</option>
+                            <option value="spider">Spidervegas</option>
+                            <option value="goldfish" selected>Goldfish</option>
+                        </select>
+                        
+                    <!-- </div> -->
+
+                    <section class="arrive-depart flex flexspb">
+                        <div class="group field">
+                            <label for="arrive" class="form__label">Arrivé</label>
+                            <input type="date" class="class_input" id="arrive" name="arrive" minlength="4" maxlength="25" value="2021-07-19"
+                                min="2021-07-01" max="2030-12-31" required>
+
+                        </div>
+                        <div class="group field">
+                            <label for="depart" class="form__label">départ</label>
+                            <input type="date" class="class_input" id="depart" name="depart" minlength="4" maxlength="25" value="2021-07-30"
+                                min="2021-30-08" max="2030-12-31" required>
+                                
+                            
+                        </div>
+                    </section>
+
+                    <section class="adultenfantchambre flex flexspar">
+                        <div class="lestrois flex flxjc flexspb">
+                            <div class="group field">
+                                <label for="adulte-select" class="form__label">Adulte</label>
+
+                                <select name="choixadulte" class="class_input" id="adulte-select" onChange="Lienadulte()">
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+
+                            <div class="group field">
+                                <label for="enfant-select" class="form__label">enfant</label>
+
+                                <select name="choixenfant" class="class_input" id="enfant-select" onChange="Lienenfant()">
+                                    <option value="0" selected>0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+
+                            <div class="group field">
+                                <label for="chambre-select" class="form__label">chambre</label>
+
+                                <select name="choixchambre" class="class_input" id="chambre-select" onChange="Lienchambre()">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- <button type="submit">valider</button> -->
+
+                    <a href="page1.html" class="btn-valid">valider</a>
+                    <!-- <button onclick="getElementById('demo').innerHTML="">valider</button> -->
+
+                </section>
+
+            </form>
+        
+
+        
+
+    </main>
+
+    <footer >
+        <a href="mentions.html">
+            <p>&copy;&nbsp;Mentions légales</p>
+        </a>
+    </footer>
+</body>
+
+</html>

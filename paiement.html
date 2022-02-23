@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/sunshine.png" />
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar" role="navigation">
+            <div class="navbar-brand"><a href="index.html"><img src="img/sunshine.png" alt="log"></a></div>
+
+            <ul class="navbar-links">
+                <li class="navbar-link"><a href="index.html">Accueil</a></li>
+                <li class="navbar-link"><a href="page1.html">hôtels</a></li>
+                <li class="navbar-link"><a href="connexion.html">Me connecter</a></li>
+
+            </ul>
+            <button class="burger"> <span class="bar"></span></button>
+        </nav>
+    </header>
+    <main role="main">
+       <section class="flex flexdc flexjc">
+    <img class="img_cb" src="img/CB-1.jpg" alt="carte bancaire">
+    <label for="cb" >Numero de carte</label>
+    <input type="text" class="class_input" id="num_cb" name="cb" maxlength="16"  required>
+    <label for="cvv" >code cvv</label>
+    <input type="text" class="class_input" id="cvv" name="cvv" maxlength="3"  required>
+    <label for="namecb">nom titulaire</label>
+    <input type="text" class="class_input" id="namecb" name="namecb" maxlength="25"  required>
+</section>
+</main>
+<footer >
+    <a href="mentions.html">
+        <p>&copy;&nbsp;Mentions légales</p>
+    </a>
+</footer>
+</body>
+</html>

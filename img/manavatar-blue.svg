@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="manavatar-blue.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.46324355"
+     inkscape:cx="396.11993"
+     inkscape:cy="562.33919"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path179"
+       style="fill:#0000ff;stroke:#040404;stroke-width:0.765;stroke-opacity:0.89024401;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 142.58419,111.69151 a 42.26538,39.980766 0 0 1 -36.34972,19.67373 42.26538,39.980766 0 0 1 -35.799364,-18.80557 73.67884,63.683649 0 0 0 -36.736776,55.07415 73.67884,63.683649 0 0 0 73.67871,63.68346 73.67884,63.683649 0 0 0 73.6787,-63.68346 73.67884,63.683649 0 0 0 -38.47155,-55.94231 z" />
+    <ellipse
+       style="fill:#0000ff;stroke:#19281c;stroke-width:0.765;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path624"
+       cx="106.23462"
+       cy="87.672112"
+       rx="41.123074"
+       ry="37.981728" />
+  </g>
+</svg>

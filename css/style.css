@@ -1,0 +1,812 @@
+/* code couleur  
+fond bleu = rgb(84, 155, 247)
+6319981562's
+*/
+:root {
+    font-size: 12px;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    background-color: #383838;
+    
+}
+
+
+
+/********************************************
+*                                           *          
+*           gestion du flex                 *
+*                  debut                    *
+*********************************************/
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexac {
+    align-items: center;
+}
+
+.flexdc {
+    flex-direction: column;
+}
+
+.flexjc {
+    justify-content: center;
+}
+
+.flexspar {
+    justify-content: space-around;
+}
+
+.flexspb {
+    justify-content: space-between;
+}
+
+/* --------- fin gestion du flex------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    height: 15%;
+    width: 100vw;
+    z-index: 40;
+}
+
+h1 {
+    color: red;
+    font-size: 3rem;
+    text-align: center;
+    margin:10px;
+}
+h2{
+    color:rgba(102, 255, 0, 0.945);
+    font-size: 2rem;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    height: 30px;
+    width: 50%;
+    cursor: pointer;
+}
+
+a.btn_hotel {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(243, 41, 41);
+    font-size: 2rem;
+    border-radius: 15px;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+    
+}
+
+a.btn-valid {
+    border-radius: 10px;
+    margin: 60px;
+    background-color: rgb(243, 41, 41);
+    line-height:20px;
+    padding: 5px;
+    text-align: center;
+    
+    
+}
+
+ul {
+    width: 50%;
+    list-style: none;
+    justify-self: flex-end;
+}
+
+li {
+    list-style-type: none;
+    color: white;
+    font-size: 1.8rem;
+    
+}
+
+
+/*-------- fin gestion header   */
+
+main {
+   position: relative;
+    width: 100%;
+    min-height:85vh;
+    margin: auto;
+    padding: 20px;
+    padding-top: 10%;
+    margin-top: 60px;
+    text-align:center;
+    
+}
+main > form{
+   position: absolute;
+   left:10%;
+   top:10%;
+    width: 80%;
+    padding: 20px 15px;
+    border-radius: 10px;
+    background-color: rgb(56, 56, 56);
+    box-shadow: inset 5px 5px 5px black, inset -5px -5px 10px black;
+}
+.img_cb{
+    width:100%;
+}
+
+/* traitement bar naviguation */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 10px;
+    color: #f0f0f0;
+    background: rgb(22, 117, 141);
+}
+
+.navbar-links {
+    display: flex;
+
+}
+
+.navbar-link {
+    padding: 0 10px;
+}
+
+.navbar-link>a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.burger {
+    display: none;
+}
+
+.pagehotel {
+    /* border:white solid 1px; */
+    display: flex;
+    flex-direction: column;
+    background-color: #383838;
+    ;
+    justify-content: center;
+}
+
+.img_presentationhotel {
+    width: 100%;
+   
+    margin: 10px;
+    padding: 10px;
+}
+
+main p {
+    text-align: justify;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+}
+
+
+.sousprincipale1 {
+    text-align: center;
+}
+
+/*small device*/
+@media screen and (max-width:767.98px) {
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        width: 0;
+        height: calc(100vh - 65px);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        background: #000;
+        transition: all .5s ease-in-out;
+        ;
+    }
+
+    .show-nav .navbar-links {
+        width: 100vh;
+        transform: translateX(0);
+    }
+
+    .navbar__link {
+        transform: translateX(101%);
+        transition: all .5s ease-in-out;
+    }
+
+    .show-nav .navbar-link {
+        transform: translateX(0);
+    }
+
+    .navbar-link>a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.6rem;
+        color: #f0f0f0;
+        transition: all .4s ease-in-out;
+    }
+
+    .navbar-link>a:hover {
+
+        padding-left: 2rem;
+        letter-spacing: 5px;
+
+    }
+
+    /***toglle menu***/
+    .burger {
+        display: block;
+        position: relative;
+        padding: 0;
+        width: 45px;
+        height: 45px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+        width: 45px;
+        height: 4px;
+        background: #ddd;
+        border-radius: 3px;
+        transition: all .5s ease-in-out;
+    }
+
+    .bar::before,
+    .bar::after {
+        content: "";
+        width: 45px;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        background: #ddd;
+        border-radius: 3px;
+        transition: all .5s ease-in-out;
+    }
+
+    .bar::before {
+        transform: translateY(-12px);
+    }
+
+
+    .bar::after {
+        transform: translateY(12px);
+    }
+
+    .show-nav .bar {
+        width: 0;
+        background: transparent;
+    }
+
+    .show-nav .bar::before {
+        transform: rotate(45deg);
+    }
+
+    .show-nav .bar::after {
+        transform: rotate(-45deg);
+    }
+
+}
+
+/*meduim devices*/
+@media screen and (min-width:768px) {
+    .navbar-link>a::after {
+        display: block;
+        content: "";
+        width: 0;
+        height: 2px;
+        background: #ddd;
+        transition: width .4s;
+    }
+
+    .navbar-link:hover>a::after {
+        width: 100%;
+    }
+}
+
+
+
+.container {
+    position: relative;
+    color: white;
+}
+
+.container2 {
+    position: relative;
+    
+    color: white;
+}
+
+.nameclient {
+    color: white;
+    font-size: 2rem;
+
+}
+
+.reservation {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    word-break: break-word;
+}
+
+.coupemot {
+    text-align: center;
+    word-break: break-word;
+}
+
+.compris {
+    font-size: 1.4rem;
+    color: red;
+    margin: 30px;
+    padding: 20px;
+}
+
+.class_input
+{
+    height:40px;
+    margin: 20px;  
+}
+
+#hotel-select {
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    /* transform: translatex(-15px); */
+}
+
+.arrive-depart {
+    /* border: green solid 1px; */
+    background-color: rgba(255, 255, 255, 0);
+    width: 75%;
+    height: 50px;
+    margin: 35px;
+    /* transform: translatex(-30px); */
+    /* align-items: center; */
+}
+
+.adultenfantchambre {
+    background-color: rgba(255, 255, 255, 0);
+    /* border:red solid 1px; */
+    width: 100%;
+    height: 30px;
+    margin: 5px;
+    transform: translatex(10px);
+}
+
+.group {
+    position: relative;
+    padding: 15px 0 0;
+    margin: 5px;
+    width: 100%;
+    height: 60px;
+    transform: translate(-50%);
+    /* border:rgb(78, 17, 221) solid 2px; */
+}
+
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    /* border-bottom: 2px solid rgb(243, 7, 7); */
+    outline: 0;
+    font-size: 1.3rem;
+    color: white;
+    padding: 7px 0;
+    border-radius: 10px;
+    /* background: transparent; */
+    /* transition: border-color 0.8s; */
+}
+
+
+
+.field {
+    width: 65px;
+}
+
+.form__label {
+    /* position: absolute;
+    top: 5px; */
+    width: 100px;
+    /* left: -2px; */
+    display: block;
+    font-size: 1.4rem;
+    color: rgb(236, 67, 25);
+    transition: .5s;
+}
+
+
+label{
+    color: white;
+}
+
+.form__label2 {
+    position: absolute;
+    top: -5px;
+    width: 100px;
+    left: 5px;
+    display: block;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    transition: .5s;
+}
+
+p.label_connexion {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100px;
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    color: rgb(236, 67, 25);
+    transition: .5s;
+}
+
+.form__field:focus .form__label {
+    color: rgb(236, 204, 25);
+}
+
+button {
+    margin-top: 15px;
+    width: 100px;
+    height: 30px;
+}
+
+/*-------------------deb posdown  ----------------*/
+
+.pos {
+
+    width: 90%;
+    margin: auto;
+    background-color: rgba(218, 148, 82, .1);
+    box-shadow: white 0 0 10px;
+    height: 50%;
+    overflow: hidden;
+    /******************????????????????????*******************/
+}
+
+.posup {
+    /* border: #e43936 solid 1px; */
+    color: blue;
+}
+
+.posdown {
+    opacity: 1;
+    height: 50%;
+    /* border:red solid 1px; */
+}
+
+
+
+.apercu {
+    margin: 10px;
+    height: 100%;
+    width: 90%;
+    /* border: rgb(13, 196, 53) solid 2px; */
+
+}
+
+.img_presentation {
+
+    opacity: 0.6;
+    width: 180px;
+    z-index: 1;
+
+}
+
+.img_presentation2 {
+
+    opacity: 1;
+    width: 100%;
+    z-index: 1;
+    vertical-align: middle;
+text-align:center;
+
+}
+
+
+.img_presentation::before {
+    content: '';
+    position: absolute;
+    background-color: #13e213;
+    width: 100%;
+    height: 100%;
+    bottom: -1px;
+    right: 20px;
+    z-index: 2;
+
+
+}
+
+.img-man {
+    width: 100px;
+}
+
+.descrip_hotel {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.namehotel {
+    font-size: 3rem;
+    color: blue;
+    text-shadow: white 0 0 4px;
+    margin:20px;
+}
+
+.text_hotel {
+    color: white;
+    font-size: 1.5rem;
+    padding: 4px;
+    text-align: center;
+}
+
+.textpricehotel {
+    position: relative;
+    font-size: 1rem;
+    color: rgb(252, 17, 76);
+    margin:20px;
+}
+
+.textpricehotel2 {
+    position: relative;
+    font-size: 2rem;
+    color: rgb(195, 236, 13);
+}
+
+/* .textpricehotel:before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 80px;
+    bottom: -2px;
+    z-index: 50;
+    background-color: cornsilk;
+} */
+
+.textpricehotel:after {
+    position: absolute;
+    height: 10px;
+    width: 24px;
+    /* background-color: rgba(14, 206, 24, 0.3); */
+    font-size: 1rem;
+    content: 'TTC';
+    color: white;
+    top: 0;
+    right: -30px;
+    
+
+}
+
+.pricehotel {
+    font-size: 2rem;
+    color: crimson;
+    margin:20px;
+}
+
+
+
+
+.container3 {
+    position: relative;
+    color: white;
+    /* box-shadow: #13e213 0 0 20px; */
+    height: 100vh;
+    width: 100vw;
+}
+
+.dash {
+    position: relative;
+    height: 80%;
+    border: white solid 1px;
+    background-color: #bea4a4;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+}
+
+.dash1 {
+    height: 100%;
+    width: 45%;
+    /* background-color: rgb(177, 21, 164); */
+
+}
+
+.dash2 {
+    height: 100%;
+    width: 45%;
+    /* background-color: rgb(13, 204, 211); */
+
+}
+
+.dash3 {
+    height: 100%;
+    width: 45%;
+    /* background-color: rgb(13, 204, 211); */
+
+}
+
+
+.container4 {
+    position: relative;
+    bottom: 0;
+    height: 90vh;
+    width: 90vw;
+    /* background-color: rgb(50, 236, 25); */
+    color: white;
+}
+
+/*-------------------Footer----------------------------*/
+
+footer {
+
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(32, 214, 62);
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    line-height: 40px;
+    
+}
+
+/***********************************************carousel*************************/
+.mySlides {
+    display: none;
+    padding-bottom:10px ;
+}
+
+.carousel {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+   
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    -webkit-text-stroke: red 2px;
+    font-weight: bold;
+    font-size: 2.1rem;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev{
+    left:0;
+    
+}
+
+/* On hover, add a black background color with a little bit see-through */
+/* .prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+} */
+
+/* Number text (1/ 4 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0,.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+
+/**************************************************************************/
+.form-résa > form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+span{
+    color:red;
+}
+.form-résa >  form > label{
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+.lien{
+    color: rgba(255, 123, 0, 0.719);
+    text-decoration: underline;
+}
